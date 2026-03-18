@@ -1,4 +1,7 @@
-9## 1. Execute os seguinte comandos e interprete seus resultados
+pkg list
+pkg install -forge image
+
+## 1. Execute os seguinte comandos e interprete seus resultados
 
 a = 500/10 #500 dividido por 10 = 50
 a = 500/10; #500 dividido por 10 mas com ponto e vírgula, entao não exibe no console
