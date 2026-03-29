@@ -1,8 +1,8 @@
 # Kariny Mylena Pereira Abrahão - 212050013
 
 # Exercício 01
-A=zeros(300,300);
-A(25:175,125:175)=1;
+A=zeros(300,300); %cria matriz 300x300 preenchida com zeros
+A(25:175,125:175)=1; %muda pixels para 1 em: (linha 25 a 175 e coluna 125 a 175)
 
 B=zeros(300,300);
 B(125:175,25:175)=1;
@@ -91,61 +91,61 @@ title('Imagem C - B')
 # Exercício 05
 #Multiplicações e Visualização
 plot1(A, B, C)
-AB = A * B;
+AB = A .* B;
 subplot(3,3,4), imshow(AB),
-title('Imagem A * B')
+title('Imagem A .* B')
 
-AC = A * C;
+AC = A .* C;
 subplot(3,3,5), imshow(AC),
-title('Imagem A * C')
+title('Imagem A .* C')
 
-BC = B * C;
+BC = B .* C;
 subplot(3,3,6), imshow(BC),
-title('Imagem B * C')
+title('Imagem B .* C')
 
 #Fatores Trocados
-BA = B * A;
+BA = B .* A;
 subplot(3,3,7), imshow(BA),
-title('Imagem B * A')
+title('Imagem B .* A')
 
-CA = C * A;
+CA = C .* A;
 subplot(3,3,8), imshow(CA),
-title('Imagem C * A')
+title('Imagem C .* A')
 
-CB = C * B;
+CB = C .* B;
 subplot(3,3,9), imshow(CB),
-title('Imagem C * B')
+title('Imagem C .* B')
 
-#Resultados: Podemos visualizar que a ordem dos fatores altera os resultados
-# a multiplicação das matrizes não atende a propriedade da comutatividade.
+#Resultados: Podemos visualizar que a ordem dos fatores não altera os resultados
+# a multiplicação das matrizes atende a propriedade da comutatividade.
 
 # Exercício 06
 #Divisões e Visualização
 plot1(A, B, C)
-AB = A / B;
+AB = A ./ B;
 subplot(3,3,4), imshow(AB),
-title('Imagem A / B')
+title('Imagem A ./ B')
 
-AC = A / C;
+AC = A ./ C;
 subplot(3,3,5), imshow(AC),
-title('Imagem A / C')
+title('Imagem A ./ C')
 
-BC = B / C;
+BC = B ./ C;
 subplot(3,3,6), imshow(BC),
-title('Imagem B / C')
+title('Imagem B ./ C')
 
 #Fatores Trocados
-BA = B / A;
+BA = B ./ A;
 subplot(3,3,7), imshow(BA),
-title('Imagem B / A')
+title('Imagem B ./ A')
 
-CA = C / A;
+CA = C ./ A;
 subplot(3,3,8), imshow(CA),
-title('Imagem C / A')
+title('Imagem C ./ A')
 
-CB = C / B;
+CB = C ./ B;
 subplot(3,3,9), imshow(CB),
-title('Imagem C / B')
+title('Imagem C ./ B')
 
 #Resultados: Podemos visualizar que a ordem dos fatores altera os resultados
 # a divisão das matrizes não atende a propriedade da comutatividade.
