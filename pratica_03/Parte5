@@ -1,0 +1,16 @@
+PARTE 5
+
+Em quais situações cada um é mais adequado?
+1. Domínio da Frequência é mais adequado para:
+Remoção de Ruído Periódico: É a aplicação clássica mostrada na sua prática
+. Como o ruído periódico se manifesta como pontos brilhantes (picos de energia) isolados no espectro, ele pode ser facilmente identificado e eliminado usando filtros Notch (rejeita-frequência), algo quase impossível de fazer com precisão no domínio espacial
+.
+Filtragem Global e Controle de Artefatos: Permite um controle muito rigoroso sobre quais frequências (anatomia suave vs. bordas/ruído) são mantidas
+. É possível escolher filtros como o Gaussiano para garantir a ausência total de efeitos de anelamento (ringing), que são comuns em filtros espaciais que mimetizam cortes abruptos
+.
+Análise de Estruturas Globais: Útil quando se deseja isolar componentes de variação lenta (brilho médio e áreas suaves) de componentes de variação rápida (bordas e detalhes finos) em toda a imagem simultaneamente
+.
+2. Domínio Espacial é mais adequado para:
+Operações Locais e Rápidas: Para filtros simples com máscaras pequenas (como uma média 3×3 ou filtros de Sobel para bordas), o processamento espacial é mais direto e dispensa o cálculo da FFT.
+Ruídos Impulsivos (Sal e Pimenta): Embora filtros passa-baixa na frequência possam atenuar o ruído sal e pimenta (como visto nos seus testes), filtros não lineares no domínio espacial (como o filtro de mediana) costumam ser muito mais eficazes para remover os "pixels pretos e brancos" sem borrar tanto as bordas.
+Ajustes de Contraste e Brilho: Transformações de intensidade simples (como a correção gama ou equalização de histograma) são realizadas de forma muito mais eficiente diretamente nos pixels.

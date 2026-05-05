@@ -55,5 +55,3 @@ for i = 1:length(lista_imagens)
 
 end
 
-
-
